@@ -1,0 +1,37 @@
+<view class='body'>
+    <view class='header'>
+        <view class='headAndName'>
+            <view class='head'>
+                <image class='userinfo-avatar' src='{{userInfo.avatarUrl}}' background-size="cover"></image>
+            </view>
+            <view class='name'>{{userInfo.nickName}}</view>
+        </view>
+    </view>
+
+    <view class='contont'>
+        <view class='my'>
+            <view class='cellphone'>
+              <view class='my-Icon'></view>
+              <view class='cellphone-text'>我的预定</view>
+            </view>
+            <navigator url='../make/make'>
+            <view class='bangding'>
+               <view class='bangding-Icon'></view>
+                <view class='bangding-text'>{{about}}条</view>
+            </view>
+            </navigator>
+        </view>
+        <view class='bing'>
+            <view class='cellphone'>
+                <view class='cellphone-icon'></view>
+                <view class='cellphone-text'>手机</view>
+            </view>
+            <navigator url='../bind/bind'>
+            <view class='bangding'>
+                <view class='bangding-Icon'></view>
+                <view class='bangding-text'>未绑定</view>
+            </view>
+            </navigator>
+        </view>  
+    </view>
+</view>

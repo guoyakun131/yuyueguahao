@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/home-page/home-page",
+    "pages/doctor/doctor",
+    "pages/I-me/I-me",
+    "pages/expert/expert",
+    "pages/details/details",
+    "pages/bind/bind",
+    "pages/make/make"
+   
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "预约名医",
+    "navigationBarTextStyle":"#fffff"
+  },
+  "tabBar": {
+    "color": "#929292",
+    "selectedColor": "#09bb07",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home-page/home-page",
+        "text": "首页",
+        "iconPath": "images/home-page.png",
+        "selectedIconPath": "images/home-page-1.png"
+      },
+      {
+        "pagePath": "pages/doctor/doctor",
+        "text": "名医",
+        "iconPath": "images/doctor.png",
+        "selectedIconPath": "images/doctor-1.png"
+      },
+      {
+        "pagePath": "pages/I-me/I-me",
+        "text": "我的",
+        "iconPath": "images/I-me.png",
+        "selectedIconPath": "images/I-me1.png"
+        
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,129 @@
+
+
+<view class="body">
+
+  <view class='banner'>
+
+  <swiper indicator-dots="{{indicatorDots}}"  
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swiper' >  
+      <block wx:for="{{imgUrls}}">  
+        <swiper-item>  
+           
+            <image src="{{item.url}}" class="slide-image"/>  
+           
+        </swiper-item>  
+        
+      </block>  
+</swiper>  
+
+  </view>
+
+  <view class='content'>
+    <view class='contont-top'>
+      
+    </view>
+    <view class='domain'>
+        <view class='domain-left' catchtap='locationClick' >
+        
+            <view class='domain-left-icon'>
+            
+            </view>
+            <view class='domain-left-text'>
+              <text>邯郸市丛台区政通小区</text>
+            </view>
+        </view>
+
+        <view class='domain-right' catchtap='telephoneClick'>
+          <view class='domain-right-icon'></view>
+          <view class='domain-right-text'>
+            <text>专家预约</text>
+          </view>
+        </view>
+    </view>
+
+    <view class='contont-tabs'>
+        <view class='tabs'>
+            <scroll-view scroll-left="{{scrollLeft}}" scroll-x="true" style=" white-space: nowrap; " >
+      
+      <view bindtap='swichNav'class="tabs-item {{currentTab==0?'active':''}}" data-current="0" >
+        皮肤疾病
+      </view>
+      <view bindtap='swichNav'class="tabs-item {{currentTab==1?'active':''}}" data-current="1" >
+        案例欣赏
+      </view>
+      <view bindtap='swichNav'class="tabs-item {{currentTab==2?'active':''}}" data-current="2" >
+        中医大家
+      </view>
+      <view bindtap='swichNav'class="tabs-item {{currentTab==3?'active':''}}" data-current="3" >
+        健康咨询
+      </view>
+
+      <view bindtap='swichNav'class="tabs-item {{currentTab==4?'active':''}}" data-current="4" >
+        科学饮食
+      </view>
+</scroll-view>
+        </view>
+
+
+        <view class='contont-plate'>
+                
+          <swiper class='tab-swiper' current="{{currentTab}}" duration="500" bindchange="switchTab"
+     style="height:100%">
+              <swiper-item wx:for="{{[0, 1, 2, 3, 4]}}">
+             
+                  <scroll-view scroll-y="true" class='scroll-contont-y'>
+
+                  <view  class='tabs-contont' wx:for="{{articles}}">
+
+
+
+                  <view class='tabs-contont-image'style="width: 30%; height: 85%;background: url({{item.img}});background-size:cover; margin-top: 2.5%;margin-left: 5%;float: left;" >
+                
+                  </view>          
+                      
+                    <view class='tabs-contont-text'>
+                          <view class='details' >
+                              {{item.details}}
+                          </view>
+
+                          <view class='TimeandFabulous'>
+                              <view class='Time'>
+                                  <view class='TimeIcon'></view>
+                                  <view class='TimeText'>{{item.time}}</view>
+                              </view>
+                              
+                              <view class='Fabulous-franm'>
+                                  <view class='browse'>
+                                    <view class='browse-Icon'></view>
+                                    <view class='browse-Text'>
+                                        {{item.browseInt}}
+                                    </view>
+                                  </view>
+                                  <view class='Fabulous'>
+                                    <view class='browse-Icon'></view>
+                                    <view class='browse-Text'>
+                                        {{item.fabulousInt}}
+                                    </view>
+                                  </view>
+                              </view>
+                          </view> 
+                              
+                    
+                    </view>
+                    </view>
+                  </scroll-view>
+               </swiper-item>
+          </swiper>
+            
+
+           
+         
+            
+           
+        
+        </view>
+    </view>
+
+    
+  </view>
+</view>

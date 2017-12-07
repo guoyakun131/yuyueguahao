@@ -1,0 +1,129 @@
+.body{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #efebeb;
+  font-family: "微软雅黑";
+}
+.contont{
+  width: 100%;
+  background: #fff;
+  height: 15%;
+  margin-top: 5%;
+
+}
+.phone{
+  width: 96%;
+  height: 49%;
+  border-bottom: 3rpx solid #ccc;
+  margin-left: 4%;
+  
+}
+.text{
+  color: #222121;
+  font-size: 32rpx;
+  line-height: 100rpx;
+  width: 15%;
+  height: 99%;
+  float: left;
+}
+.inpuut-view{
+  color: #222121;
+  font-size: 32rpx;
+  width: 83%;
+  height: 99%;
+  float: left;
+}
+.input{
+  color: #222121;
+  width: 68%;
+  height: 90%;
+  margin-top: 10rpx;
+ float: left;
+  
+}
+.line{
+  float: left;
+  width: 3rpx;
+  height: 60%;
+  margin-top: 23rpx;
+  background: #ccc;
+}
+.obtain{
+  width: 31%;
+  height: 100%;
+  text-align: center;
+  line-height: 100rpx;
+  float: left;
+  margin-left: 5rpx;
+  font-size: 32rpx;
+  color: #0e9e0d;
+  
+}
+.code{
+   width: 96%;
+  height: 49%;
+  margin-left: 4%;
+}
+.btn{
+  width: 95%;
+  height: 100rpx;
+  margin-top: 40rpx;
+  margin-left: 2.5%;
+  text-align: center;
+  background: #b9e6b8;
+  line-height: 100rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 35rpx;
+}
+.btn1{
+width: 95%;
+  height: 100rpx;
+  margin-top: 40rpx;
+  margin-left: 2.5%;
+  text-align: center;
+  background: #28be27;
+  line-height: 100rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 35rpx;
+}
+.Popup{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+}
+.shadeo{
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.4;
+  z-index: 10;
+}
+.kuang{
+  width: 400rpx;
+  height: 250rpx;
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.Prompt{
+  width: 100%;
+  height: 65%;
+  text-align: center;
+  border-bottom: 3rpx solid #ccc;
+  line-height: 180rpx;
+  font-size: 30rpx;
+}
+.close{
+  width: 100%;
+  height: 34%;
+  text-align: center;
+  color:#0e9e0d;
+  line-height: 80rpx;
+  font-size: 29rpx;
+}

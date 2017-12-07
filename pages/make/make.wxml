@@ -1,0 +1,80 @@
+<view class="body">
+    <view  class='header'>
+      <view class='header-left'   >
+        <view class='{{leftContont}}'   bindtap='makeclick'>
+          正在预约
+        </view>
+      </view>
+      <view class='header-right'   >
+        <view class='{{rightContont}}' bindtap='comclick'>
+          已完成
+        </view>
+      </view>
+    </view>
+    <view class='contont'>
+
+    <view  class='{{make}}'>
+         <view class='plate' wx:for="{{myReservation}}">
+          <view class='plate-left'>
+            <view class='head'></view>
+          </view>
+          <view class='plate-contont'>
+            <view class='words_name'>
+              <text class='black' >{{item.name}}医生 </text>
+              <text class='gray'> {{item.position}}</text>
+            </view>
+            <view class='words_money'>
+              <text class='gray'>看诊费用 ： </text>
+              <text class='red'> ￥ {{item.amount}}</text>
+            </view>
+            <view class='words_people'>
+              <text class='gray'>您前面还有</text>
+              <text class='red'>3</text>
+              <text class='gray'>位患者，请耐心等候</text>
+            </view>
+          </view>
+          <view class='plate-right'>
+            <view class='redBtn' bindtap="cancel">{{cancel}}</view>
+          </view>
+        </view>
+    </view>
+
+     <view  class='{{complate}}'>
+        <view class='plate' wx:for="{{myReservationAchieve}}">
+        <view class='plate-left'>
+          <view class='head'></view>
+        </view>
+        <view class='plate-contont'>
+          <view class='words_one'>
+            <text class='black'>{{item.name}}医生 </text>
+            <text class='gray'> {{item.position}}</text>
+          </view>
+
+          <view class='words_two'>
+              <text class='gray'>看诊费用 : </text>
+              <text class='red'>￥ {{item.amount}}</text>
+              
+          </view>
+          <view class='words_three'>
+              <text class='gray'>看诊地点 : </text>
+              <text class='blue'>{{item.location}}</text>
+          </view>
+          <view class='words_four'>
+              <text class='gray'>看诊时间 : </text>
+              <text class='blue'>{{item.treatmenttTime}}</text>
+          </view>
+        </view>
+        <view class='plate-right'>
+          <view class='greenBtn'>再次预约</view>
+        </view>
+       </view>
+     </view>
+       
+       <view class='null'>
+        <view class='icon'>
+          
+        </view>
+        <view class='null_text'>暂无记录</view>
+       </view>
+    </view>
+</view>

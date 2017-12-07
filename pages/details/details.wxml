@@ -1,0 +1,142 @@
+<view class='body'>
+    <view class='header'>
+        <view class='head'></view>
+        <view class='name'>{{name}}</view>
+        <view class='duty'>{{position}}</view>
+        <view class='describe1'>{{expertProfile}}</view>
+        <view class='describe2'>以和你妇科首席资深专家</view>
+        <view class='Cost'>
+            <view class='Cost-left'>
+              <icon class='Const-icon' type='success' size='25' color='#02c400'></icon>
+            </view>
+            <view class='Cost-right'>
+                <view class='money'>
+                  <text class='black'>看诊费用 :</text>
+                  <text class='red'>￥{{amount}}</text>
+                </view>
+                <view class='place'>
+                  <view>
+                    <text class='black'>看诊地点 :  </text>
+                    <text class='blue'>{{location}}</text>
+                  </view>
+                  <view>
+                    <text class='hui'>{{locations}}</text>
+                  </view>
+                </view>
+                <view class='time'>
+                  <text class='black'>看诊时间 : </text>
+                  <text class='blue'>{{kanzhenshijian}}</text>
+
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class='contont'>
+        <view class='process'>
+            <view class='process-header'>
+                <view class='line-left'></view>
+                <view class='line-text'>看诊流程</view>
+                <view class='line-right'></view>
+            </view>
+            <view class='process-contont'>
+                <view class='frame1'>
+                    <view class='Submit'>
+                      <text> ① 提交申请</text>
+                    </view>
+                </view>
+                <view class='circe-view'>
+                  <view class='circle'></view>
+                </view>
+
+                <view class='frame2'>
+                    <view class='assistant'>
+                      <text>② 医小助手收集您的病情资料</text>
+                    </view>
+                    <view class='gray'>
+                      <text>30分钟内医小助手会与您联系</text>
+                    </view>
+                </view>
+
+                <view class='circe-view'>
+                  <view class='circle'></view>
+                </view>
+
+                <view class='frame3'>
+                  <view class='assistant'>
+                      <text>③ 医生确认病情资料是否完整</text>
+                  </view>
+                  <view class='timeAndlocation'>
+                      <text>医小助手安排看诊时间与地点</text>
+                  </view>
+                  
+                   <view class='gray'>
+                      <text>收到您的病情资料后60分钟内确认</text>
+                    </view>
+                </view>
+
+                 <view class='circe-view'>
+                  <view class='circle'></view>
+                </view>
+
+
+                <view class='frame3'>
+                  <view class='assistant'>
+                      <text>④ 医生与您按照约定时间和地点</text>
+                  </view>
+                  <view class='timeAndlocation'>
+                      <text>开始线下看诊</text>
+                  </view>
+                  
+                   <view class='gray'>
+                      <text>最快24小时之内可与名医见面进行看诊</text>
+                    </view>
+                </view>
+                
+            </view>
+        </view>
+
+        <view class='introduce'>
+            <view class='introduce-header'>
+              <view class='line-left'></view>
+              <view class='line-text'>专家介绍</view>
+              <view class='line-right'></view>
+            </view>
+
+            <view class='introduce-contont'>
+                <view class='biref'>
+                    <view class='biref-header'>
+                      <text>简介</text>
+                    </view>
+                    <view class='biref-contont'>
+                        <view class='text'>广东省学会妇产科学学分会顾问</view>
+                        <view class='text'>广东省医师学会妇产科分会顾问</view>
+                        <view class='text'>中国癌症研究基金会子宫颈癌防治协作组委员</view>
+                        <view class='text'>广东省医学会妇产科学会分会宫颈病变与阴道镜学组组长</view>
+                        <view class='text'>中国优生科学协会阴道镜与宫颈病理学分会常委</view>
+                        <view class='text'>中国妇产科学院宫颈疾病与细胞病理学分院专家委员会常委</view>
+                        <view class='text'>长期从事妇产科临床与科研教学工作，在下生殖道感染性疾病诊断治疗方面积累了丰富的临床经验，尤其在宫颈癌前变的早期筛查诊治及阴道镜的临床应用有较深的造诣，是该专业在省内的带头人</view>
+
+                        <view class='text'>何小歆 : 18826439965 </view>
+                        <view class='text'>梁舒洁 : 18100202212 </view>
+                    </view>
+                    
+                </view>
+                <view class='disease'>
+                  <view class='disease-header'>
+                      <text>擅长疾病</text>
+                  </view>
+                  <view class='disease-contont'>
+                      <view class='text'>妇科疾，病宫颈癌前病变</view>
+                      <view class='text'>宫颈癌前期病变的早期筛查诊治及阴道镜的临床作用;对下生殖道感染疾病的诊断治疗</view>
+                  </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class='footer'>
+        <view class='btn' bindtap='wxpay'>马上预约，需支付 ￥ {{amount}}定金，不成功可退还</view>
+    </view>
+   
+</view>

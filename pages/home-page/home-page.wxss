@@ -1,0 +1,230 @@
+.body{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-family: '微软雅黑';
+}
+.banner{
+  width: 100%;
+  height: 33%;
+ 
+}
+.slide-image{  
+    width: 100%;
+
+} 
+.swiper{
+  width: 100%;
+  height: 100%;
+} 
+.content{
+  width: 100%;
+  height: 67%;
+
+  
+}
+.contont-top{
+  width: 100%;
+  height: 10%;
+  
+  border-top: 20rpx #f8f8f8 solid;
+  border-bottom: 20rpx #f8f8f8 solid;
+}
+.domain{
+  width: 100%;
+  height: 10%;
+  border-bottom: 3rpx #ccc solid;
+ 
+  
+}
+.domain-left{
+  width: 60%;
+  height: 50%;
+  border-right: 2rpx #f5f5f5 solid;
+  float: left;
+  margin-top: 20rpx;
+ 
+  
+  
+}
+.domain-left-icon{
+  width: 40rpx;
+  height: 40rpx;
+  
+  float: left;
+margin-top: 10rpx;
+margin-left: 40rpx;
+
+}
+.domain-left-text{
+  width:60%;
+  height: 80%;
+  margin-left:30rpx;
+  
+  float: left;
+  font-size: 25rpx;
+  text-align: center;
+  font-family: '微软雅黑';
+  color: #b2b2b2;
+
+  
+}
+.domain-right{
+  width: 30%;
+  height: 80%;
+ margin-top: 10rpx;
+ margin-left: 10rpx;
+ float: left;
+}
+.domain-right-icon{
+   width: 40rpx;
+  height: 40rpx;
+  
+  float: left;
+margin-top: 10rpx;
+margin-left: 30rpx;
+}
+.domain-right-text{
+  float: left;
+  font-size: 25rpx;
+  text-align: center;
+  
+  color: #b2b2b2;
+  width:60%;
+  height: 80%;
+  margin-top: 12rpx;
+}
+.contont-tabs{
+  width: 100%;
+  height: 80%;
+  
+}
+.tabs{
+  width: 100%;
+  height: 15%;
+  overflow: hidden;
+  border-bottom: 3rpx #ccc solid;
+   line-height: 100rpx;
+  
+}
+.tabs-item{
+  display: inline-block;
+  width: 250rpx;
+  
+  text-align: center;
+  font-size: 28rpx;
+  color: #464545;
+  border-bottom:8rpx #0aa208 solid; 
+}
+.tabs-item.active{color: #0aa208;position: relative;}
+.tabs-item.active:after{ content: "";display: block;height: 4rpx;width: 250rpx;background: #0aa208;position: absolute; top: 83rpx;}
+.tabs-item_line{
+  display: inline-block;
+  width: 250rpx;
+  height: 100rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #1bf718;
+ 
+  
+}
+.contont-plate{
+  width: 100%;
+  height: 85%;
+  
+}
+.scroll-contont-y{
+  width:100%;
+  height:100%; 
+  white-space: nowrap; 
+  display: flex;
+ 
+}
+.tabs-contont{
+  width: 750rpx;
+  height: 50%;
+  border-bottom: 3rpx #ccc solid;
+ 
+}
+
+.tabs-contont-image{
+  width: 30%;
+  height: 85%;
+
+  background: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2823206088,3616268051&fm=27&gp=0.jpg);
+
+  background-size:cover; 
+  margin-top: 2.5%;
+  margin-left: 5%;
+  float: left;
+  
+}
+.tabs-contont-text{
+  width: 58%;
+  height: 85%;
+  margin-top: 2.5%;
+  margin-left: 4%;
+  
+  float: left;
+}
+.details{
+ 
+  white-space:normal;
+  width: 100%;
+  height: 40%;
+  transform: translateY(15rpx);
+  font-size: 28rpx;
+  color: #464545;
+}
+.TimeandFabulous{
+  width: 50%;
+  height: 50%;
+  margin-top: 2.5%;
+}
+.Time{
+  width: 100%;
+  height: 50%;
+
+  font-size: 26rpx;
+  color: #ccc;
+}
+.TimeIcon{
+  width: 25rpx;
+  height: 25rpx;
+  border:3rpx #ccc solid;
+  border-radius: 50%;
+  float: left;
+}
+.TimeText{
+  padding-left: 50rpx;
+  
+}
+.Fabulous-franm{
+  width: 100%;
+  height: 50%;
+  font-size: 26rpx;
+  color: #ccc;
+  
+}
+.browse{
+  width: 50%;
+  height: 100%;
+  float: left;
+  
+}
+.browse-Icon{
+  width: 25rpx;
+  height: 25rpx;
+  border:3rpx #ccc solid;
+  border-radius: 50%;
+  float: left;
+}
+.browse-Text{
+  padding-left: 50rpx;
+  transform: translateY(-2rpx);
+}
+.Fabulous{
+  width: 50%;
+  height: 100%;
+  float: left;
+}

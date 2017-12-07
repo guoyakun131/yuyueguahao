@@ -1,0 +1,26 @@
+<view class="body">
+    <view class='header'>
+        <view class='disease'>{{departmentName}}</view>
+        <view class='people'>
+            <text class='black'>目前有</text>
+            <text class='red'>{{expertnNumber}}</text>
+            <text>位专家</text>
+        </view> 
+    </view>
+  <scroll-view scroll-y="true" class='scroll-view-y'>
+  
+    <view class='contont' wx:for="{{expert}}">
+        <view class='head'></view>
+        <view class='name'>{{item.name}}</view>
+        <view class='duty'>{{item.position}}</view>
+        <view class='describe1'>{{item.profile}}</view>
+        <view class='describe2'>{{item.location}}</view>
+        <navigator url='../details/details?name={{item.name}}'>
+        <view class='make-button'>立即预约</view>
+        </navigator>
+    </view>
+</scroll-view>
+   
+
+    
+</view>
