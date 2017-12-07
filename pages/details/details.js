@@ -3,6 +3,7 @@ const util = require('../../utils/util.js')
 
 Page({
   data: {
+    eid:0,
     name:'',
     position:'',
     expertProfile:'',
@@ -29,6 +30,9 @@ wxpay: function () {
       
     }
   })
+  // wx.request({
+  //   url: 'https://liangyi120.xin/',
+  // })
 },
 getOpenId: function (session) {
   var that = this;
@@ -88,10 +92,6 @@ generateOrder: function (openid){
                   icon: 'success',
                   duration: 2000
                 });
-
-                wx.redirectTo({
-                  url: 'pages/make/make'
-                })
               },
               fail: function (error) {
                 // fail   
@@ -131,6 +131,7 @@ generateOrder: function (openid){
       },
       success: function (res) {
         sell.setData({
+          eid: res.data.id,
           position: res.data.position,
           expertProfile: res.data.profile,
           location: res.data.location,
