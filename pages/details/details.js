@@ -19,7 +19,7 @@ Page({
 
   },
 
-  
+
 /* 微信支付 */
 wxpay: function () {
   var that = this
@@ -62,10 +62,12 @@ getOpenId: function (session) {
 generateOrder: function (openid){
   console.log(openid)
  var that = this;
+ var eids = that.data.eid
   wx.request({
     url:'https://liangyi120.xin/pay/order',
    data: {
-     openid:openid.data
+     openid:openid.data,
+     id: eids
    },
    method: 'GET',
    success: function (res) {
@@ -113,14 +115,13 @@ generateOrder: function (openid){
 
 
   onLoad: function (options) {
-
     this.setData({
       logs: (wx.getStorageSync('logs') || []).map(log => {
         return util.formatTime(new Date(log))
       }),
-      name: options.name
+     name: options.name
     })
-    var sell = this
+    var that = this
     wx.request({
       url: 'https://liangyi120.xin/experts/name',
       data: {
@@ -130,7 +131,7 @@ generateOrder: function (openid){
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        sell.setData({
+        that.setData({
           eid: res.data.id,
           position: res.data.position,
           expertProfile: res.data.profile,
