@@ -42,7 +42,7 @@ onLoad: function () {
             session: res.data
           },
           header: {
-            'content-type': 'application/json' // 默认值
+            'content-type': 'application/json' // 
           },
           success: function (res) {
             console.log(res.data)
@@ -59,7 +59,7 @@ onLoad: function () {
             session: res.data
           },
           header: {
-            'content-type': 'application/json' // 默认值
+            'content-type': 'application/json' // 
           },
           success: function (res) {
             console.log(res.data)
