@@ -12,7 +12,7 @@
             <view class='Cost-right'>
                 <view class='money'>
                   <text class='black'>看诊费用 :</text>
-                  <text class='red'>￥{{amount}}</text>
+                  <text class='red'>￥{{amount / 100}}</text>
                 </view>
                 <view class='place'>
                   <view>
@@ -136,7 +136,7 @@
     </view>
 
     <view class='footer'>
-        <view class='btn' bindtap='wxpay'>马上预约，需支付 ￥ {{amount}}定金，不成功可退还</view>
+        <view class='btn' bindtap='wxpay'>马上预约，需支付 ￥ {{amount / 100}}定金，不成功可退还</view>
     </view>
    
 </view>

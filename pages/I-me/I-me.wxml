@@ -29,7 +29,7 @@
             <navigator url='../bind/bind'>
             <view class='bangding'>
                 <view class='bangding-Icon'></view>
-                <view class='bangding-text'>未绑定</view>
+                <view class='bangding-text'>{{binding}}</view>
             </view>
             </navigator>
         </view>  

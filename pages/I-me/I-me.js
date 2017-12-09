@@ -12,6 +12,7 @@ function init(that) {
 Page({
   data: {
     about: 0,
+    binding:'',
     logs: [],
     userInfo:{}
     
@@ -24,7 +25,7 @@ Page({
       key: 'sessionkey',
       success: function (res) {
         wx.request({
-          url: 'https://liangyi120.xin/user/about',
+          url: 'https://liangyi120.xin/user/me',
           data: {
             session: res.data
           },
@@ -34,7 +35,8 @@ Page({
           success: function (res) {
             //console.log(res.data)
             that.setData({
-              about: res.data
+              about: res.data.about,
+              binding: res.data.binding
             })
           }
         })
