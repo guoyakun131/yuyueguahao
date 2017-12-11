@@ -6,7 +6,8 @@
     "pages/expert/expert",
     "pages/details/details",
     "pages/bind/bind",
-    "pages/make/make"
+    "pages/make/make",
+    "pages/Article/Article"
    
   ],
   "window":{

@@ -4,6 +4,11 @@
   height: 100%;
   font-family: '微软雅黑';
 }
+image{
+  width: 100%;
+  height: 100%;
+  float: left;
+}
 .banner{
   width: 100%;
   height: 33%;
@@ -48,18 +53,18 @@
   
 }
 .domain-left-icon{
-  width: 40rpx;
-  height: 40rpx;
+  width: 25rpx;
+  height: 30rpx;
   
   float: left;
-margin-top: 10rpx;
-margin-left: 40rpx;
+margin-top: 5rpx;
+margin-left: 50rpx;
 
 }
 .domain-left-text{
   width:60%;
   height: 80%;
-  margin-left:30rpx;
+  margin-left:8rpx;
   
   float: left;
   font-size: 25rpx;
@@ -77,12 +82,11 @@ margin-left: 40rpx;
  float: left;
 }
 .domain-right-icon{
-   width: 40rpx;
-  height: 40rpx;
-  
+   width: 30rpx;
+  height: 30rpx;
   float: left;
-margin-top: 10rpx;
-margin-left: 30rpx;
+margin-top: 17rpx;
+margin-left: 55rpx;
 }
 .domain-right-text{
   float: left;
@@ -159,13 +163,17 @@ margin-left: 30rpx;
   float: left;
   
 }
-.tabs-contont-text{
-  width: 58%;
+.nav{
+ width: 58%;
   height: 85%;
   margin-top: 2.5%;
   margin-left: 4%;
   
   float: left;
+}
+.tabs-contont-text{
+ width: 100%;
+ height: 100%;
 }
 .details{
  
@@ -191,7 +199,7 @@ margin-left: 30rpx;
 .TimeIcon{
   width: 25rpx;
   height: 25rpx;
-  border:3rpx #ccc solid;
+ margin-top: 6rpx;
   border-radius: 50%;
   float: left;
 }
@@ -213,9 +221,9 @@ margin-left: 30rpx;
   
 }
 .browse-Icon{
-  width: 25rpx;
-  height: 25rpx;
-  border:3rpx #ccc solid;
+  width: 30rpx;
+  height: 20rpx;
+  margin-top: 6rpx;
   border-radius: 50%;
   float: left;
 }
@@ -223,8 +231,19 @@ margin-left: 30rpx;
   padding-left: 50rpx;
   transform: translateY(-2rpx);
 }
+.fabulous-Icon{
+    border-radius: 50%;
+  float: left;
+    width: 25rpx;
+  height: 25rpx;
+  margin-top: 5rpx;
+}
+.fabulous-Text{
+  padding-left: 40rpx;
+  transform: translateY(-2rpx);
+}
 .Fabulous{
   width: 50%;
   height: 100%;
-  float: left;
+  float: left; 
 }

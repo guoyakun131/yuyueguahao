@@ -1,0 +1,58 @@
+.body{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  font-family: "微软雅黑";
+}
+.title{
+  width: 92%;
+  margin-left: 4%;
+  height: auto;
+    white-space: normal;
+    float: left;
+    font-size: 40rpx;
+    font-weight: 600;
+    margin-top: 20rpx;
+}
+.textAndimg{
+  margin-top: 15rpx;
+  white-space: normal;
+  width: 92%;
+  margin-left: 4%;
+  height: auto;
+  float: left;
+  padding-bottom: 20rpx; 
+}
+.text{
+  font-size: 30rpx;
+}
+.timeAndname{
+  width: 92%;
+  height: auto;
+  float: left;
+  margin-left: 4%;
+  margin-top: 15rpx;
+}
+.time{
+  font-size: 25rpx;
+  color: #5c5c5c;
+  margin-left: 15rpx;
+  float: left;
+}
+
+.name{
+  font-size: 25rpx;
+  color: #5c5c5c;
+  float: left;
+}
+image{
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+.image{
+  width: 100%;
+  height: 500rpx;
+  margin-top: 20rpx;
+  float: left;
+}

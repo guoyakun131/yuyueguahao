@@ -105,11 +105,12 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
+       
         articlesdata.setData({
           articles:res.data,
           //types:res.data.type
           })
-        console.log(res.data[4].type)
+        //console.log(res.data[4].type)
       }
     })
 

@@ -85,6 +85,7 @@ onLoad: function () {
          url: 'https://liangyi120.xin/user/cancel',
          data: {
            session: res.data
+           
          },
          header: {
            'content-type': 'application/json' // 默认值
