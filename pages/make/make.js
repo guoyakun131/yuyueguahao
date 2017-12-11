@@ -76,7 +76,8 @@ onLoad: function () {
   },
   
  
- cancel:function(){
+cancel: function (event){
+  console.log(event.target.dataset.id)
  var that = this;
    wx.getStorage({
      key: 'sessionkey',
@@ -84,8 +85,8 @@ onLoad: function () {
        wx.request({
          url: 'https://liangyi120.xin/user/cancel',
          data: {
-           session: res.data
-           
+           session: res.data,
+           e_id: event.target.dataset.id
          },
          header: {
            'content-type': 'application/json' // 默认值
