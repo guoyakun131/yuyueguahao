@@ -28,10 +28,18 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
+        console.log(res.data)
+        if (res.data.length == 0){
+          wx.showToast({
+            title: '内容为空',
+            duration: 2000
+          })
+        }else{
         //console.log(res.data)
         wx.navigateTo({
-          url: '../details/details',
+          url: '../details/details?name='+res.data.name,
         })
+        }
       }
     })
 }

@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/home-page/home-page",
     "pages/doctor/doctor",
     "pages/I-me/I-me",
@@ -7,14 +7,14 @@
     "pages/details/details",
     "pages/bind/bind",
     "pages/make/make",
-    "pages/Article/Article"
-   
+    "pages/Article/Article",
+    "pages/attention/attention"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#000000",
     "navigationBarTitleText": "预约名医",
-    "navigationBarTextStyle":"#fffff"
+    "navigationBarTextStyle": "#fffff"
   },
   "tabBar": {
     "color": "#929292",
@@ -39,9 +39,7 @@
         "text": "我的",
         "iconPath": "images/I-me.png",
         "selectedIconPath": "images/I-me1.png"
-        
       }
     ]
   }
 }
-

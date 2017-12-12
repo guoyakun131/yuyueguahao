@@ -13,7 +13,7 @@ Page({
   makeclick:function(){
     this.setData({
       
-      
+            
       leftContont: "textContontgreen",
       rightContont: "textContontgray",
       make:"show",

@@ -6,7 +6,11 @@ Page({
 
   data: {
     //types: [0, 1, 2, 3, 4],
-    articles:[],
+    a:[],
+    b: [],
+    c: [],
+    d: [],
+    e: [],
    tabsName:"皮科疾病",
    //details:"内科迎来最年轻鲜肉医生，女患者和女医师都疯狂了",
   // Time:"2017-10-24",
@@ -98,19 +102,23 @@ Page({
   onLoad: function () {
    
    //请求后端数据
-    var articlesdata =this
+    var taht =this
     wx.request({
       url: 'https://liangyi120.xin/home/wenzhang', //仅为示例，并非真实的接口地址
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-       
-        articlesdata.setData({
-          articles:res.data,
+        console.log(res.data)
+        taht.setData({
+          a:res.data.a,
+          b: res.data.b,
+          c: res.data.c,
+          d: res.data.d,
+          e: res.data.e,
           //types:res.data.type
           })
-        //console.log(res.data[4].type)
+       
       }
     })
 

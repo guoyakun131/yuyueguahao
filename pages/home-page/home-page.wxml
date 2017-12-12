@@ -58,7 +58,7 @@
         中医大家
       </view>
       <view bindtap='swichNav'class="tabs-item {{currentTab==3?'active':''}}" data-current="3" >
-        健康咨询
+        健康资讯
       </view>
 
       <view bindtap='swichNav'class="tabs-item {{currentTab==4?'active':''}}" data-current="4" >
@@ -72,13 +72,11 @@
                 
           <swiper class='tab-swiper' current="{{currentTab}}" duration="500" bindchange="switchTab"
      style="height:100%">
-              <swiper-item wx:for="{{[0, 1, 2, 3, 4]}}">
+              <swiper-item wx:for="{{[a, b, c, d, e]}}" wx:for-item="i">
              
                   <scroll-view scroll-y="true" class='scroll-contont-y'>
 
-                  <view  class='tabs-contont' wx:for="{{articles}}">
-
-
+                  <view  class='tabs-contont' wx:for="{{i}}">
 
                   <view class='tabs-contont-image'style="width: 30%; height: 85%;background: url({{item.img}});background-size:cover; margin-top: 2.5%;margin-left: 5%;float: left;" >
                 
@@ -121,6 +119,8 @@
                     </view>
                   </navigator>
                     </view>
+
+
                   </scroll-view>
                </swiper-item>
           </swiper>

@@ -9,8 +9,10 @@
                 </view>
             </view>
             <view class='Prompt'>
+            <navigator url='../attention/attention'>
                 <view class='PromptIcon'></view>
                 <view class='PrimptDot'></view>
+                </navigator>
             </view>
          </view>
 
@@ -32,10 +34,10 @@
     <view class='contont'>
         <scroll-view class='scroll-view-y' scroll-y="true">
           <!--循环科室-->
-            <view class='expert' wx:for="{{department}}">
+            <view class='expert' wx:for="{{department}}" >
 
                 <view class='expert-header'>
-                    {{item.department}}有({{item.number}})位专家
+                    {{item.department}}{{index}}有({{item.number}})位专家
                 </view>
                 <navigator url='../expert/expert?departmentName={{item.department}}&expertnNumber={{item.number}}'>
                     <view class='expert-scroll'>
