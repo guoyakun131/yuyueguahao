@@ -65,7 +65,7 @@
           </view>
         </view>
         <view class='plate-right'>
-          <view class='greenBtn'>再次预约</view>
+          <view class='greenBtn'><navigator url='../details/details?name={{item.name}}'>再次预约</navigator>再次预约</view>
         </view>
        </view>
      </view>

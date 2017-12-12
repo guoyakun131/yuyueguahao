@@ -81,7 +81,7 @@
                   <view class='tabs-contont-image'style="width: 30%; height: 85%;background: url({{item.img}});background-size:cover; margin-top: 2.5%;margin-left: 5%;float: left;" >
                 
                   </view>          
-                  <navigator hover-class='none' class='nav' url='../Article/Article'>
+                  <navigator hover-class='none' class='nav' url='../Article/Article?id={{item.id}}'>
                     <view class='tabs-contont-text'>
                           <view class='details' >
                               {{item.details}}
