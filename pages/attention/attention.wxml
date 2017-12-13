@@ -1,2 +1,5 @@
 <!--pages/attention/attention.wxml-->
-<text></text>
+<view wx:for="{{message}}">
+ <text>{{index+1}}{{item}}</text>
+</view>
+

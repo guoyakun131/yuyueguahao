@@ -5,15 +5,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+  message:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+  wx.getStorage({
+    key: 'sessionkey',
+    success: function(res) {
+      wx.request({
+        url: 'https://liangyi120.xin/user/message',
+        data: {
+          session: res.data
+        },
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success: function (res) {
+         that.setData({
+           message:res.data
+         })
+    }
+  })
+    }
+  })
   },
+
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
