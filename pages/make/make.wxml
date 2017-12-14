@@ -34,7 +34,7 @@
             </view>
           </view>
           <view class='plate-right'>
-            <view class='redBtn' data-id="{{item.id}}" bindtap="cancel">{{cancel}}</view>
+            <view class='redBtn' data-id="{{item.id}}" id='{{item.id}}' bindtap="cancel">{{cancel}}</view>
           </view>
         </view>
     </view>
