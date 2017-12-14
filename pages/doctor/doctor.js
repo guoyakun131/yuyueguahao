@@ -9,7 +9,7 @@ Page({
     quantity:0,
     department:[],
     //得到后端数据到数组
-    doctorData: [],
+    //doctorData: [],
     logs: []
   },
   inputuserName:function(ev){
@@ -50,28 +50,43 @@ Page({
     //请求后端得到医生数据
     
     var sell = this
-    wx.request({
-      url: 'https://liangyi120.xin/experts/expertsAll', 
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        //console.log(res.data)
-        //赋值给doctorData
-        sell.setData({ doctorData: res.data
-        })
+    // wx.request({
+    //   url: 'https://liangyi120.xin/experts/expertsAll', 
+    //   header: {
+    //     'content-type': 'application/json' // 默认值
+    //   },
+    //   success: function (res) {
+    //     //console.log(res.data)
+    //     //赋值给doctorData
+    //     sell.setData({ doctorData: res.data
+    //     })
        
-      }
-    })
+    //   }
+    // })
 
     //var list = this
+    // wx.request({
+    //   url: 'https://liangyi120.xin/depatment/list', 
+    //   header: {
+    //     'content-type': 'application/json' // 默认值
+    //   },
+    //   success: function (res) {
+    //     //console.log(res.data)
+    //     sell.setData({
+    //       department: res.data
+    //     })
+
+    //   }
+    // })
+
+
     wx.request({
-      url: 'https://liangyi120.xin/depatment/list', 
+      url: 'https://liangyi120.xin/depatment/departmentMap', 
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        //console.log(res.data)
+      console.log(res.data)
         sell.setData({
           department: res.data
         })

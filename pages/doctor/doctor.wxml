@@ -34,16 +34,16 @@
     <view class='contont'>
         <scroll-view class='scroll-view-y' scroll-y="true">
           <!--循环科室-->
-            <view class='expert' wx:for="{{department}}" >
+            <view class='expert' wx:for="{{department}}" wx:for-index="idx"  wx:for-item="itemName">
 
                 <view class='expert-header'>
-                    {{item.department}}有({{item.number}})位专家
+                    {{idx}}有({{itemName.length}})位专家
                 </view>
-                <navigator url='../expert/expert?departmentName={{item.department}}&expertnNumber={{item.number}}'>
+                <navigator url='../expert/expert?departmentName={{idx}}&expertnNumber={{itemName.length}}'>
                     <view class='expert-scroll'>
                     <scroll-view class='scroll-view-x' scroll-x="true">
                     <!--循环后端数据-->
-                    <view wx:for="{{doctorData}}" class='expert-contont'>
+                    <view wx:for="{{itemName}}" class='expert-contont'>
                         <view class='imageAndname'>
                             <view class='image'>
                             <image src='{{item.img}}'></image>
