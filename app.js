@@ -1,33 +1,8 @@
 //app.js
 App({
+
   onLaunch: function () { 
-        wx.login({
-          success: function (res) {
-            if (res.code) {
-              //发起网络请求
-              wx.request({
-                url: 'https://liangyi120.xin/login/login',
-                data: {
-                  code: res.code
-                },
-                header: {
-                  'content-type': 'application/json' // 默认值
-                },
-                success: function (res) {
-                  wx.setStorage({
-                    key: "sessionkey",
-                    data: res.data.session_key
-                  })
-                }
-              })
-            } else {
-              console.log('获取用户登录态失败！' + res.errMsg)
-            }
-
-          }
-        })
-           
-
+     var that = this
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -39,11 +14,9 @@ App({
     //    // 发送 res.code 到后台换取 openId, sessionKey, unionId
     //   }
     // })
-  
    
 
-
-    // 获取用户信息
+    //获取用户信息
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
@@ -52,20 +25,48 @@ App({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
+              console.log(this.globalData.userInfo.nickName)
 
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res)
               }
+           
             }
           })
         }
       }
     })
+    wx.login({
+      success: function (res) {
+        if (res.code) {
+          //发起网络请求
+          wx.request({
+            url: 'https://liangyi120.xin/login/login',
+            data: {
+              code: res.code,
+            },
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success: function (res) {
+              wx.setStorage({
+                key: "sessionkey",
+                data: res.data.session_key
+              })
+            }
+          })
+        } else {
+          console.log('获取用户登录态失败！' + res.errMsg)
+        }
 
+      }
+    })
   },
+
   globalData: {
     userInfo: null
-  }
+  },
+
 })
