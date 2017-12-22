@@ -101,7 +101,47 @@ Page({
   
   
   onLoad: function () {
-   
+
+        wx.getUserInfo({
+          
+          success: function(res) {
+            console.log("dfa")
+            var data ={
+              nickName: res.userInfo.nickName,
+              avatar: res.userInfo.avatarUrl
+            }
+            wx.getStorage({
+              key: 'sessionkey',
+              success: function(res) {
+                console.log("sions")
+                wx.request({
+                  url: 'https://liangyi120.xin/user/addUser',
+                  data: {
+session:res.data,
+user:data
+                  },
+                  header: {
+                    'content-type': 'application/json' // 默认值
+                  },
+                  success: function (res) {
+                    console.log("成功")
+                  }
+                })
+              },
+              fail: function(res) {
+                console.log("123")
+              },
+              complete: function(res) {},
+            })
+           
+          },
+          fail: function(res) {},
+          complete: function(res) {},
+        })
+
+
+    
+
    //请求后端数据
     var taht =this
     wx.request({
@@ -163,6 +203,8 @@ Page({
           })
         }
       })
+
+      
     }
   },
   getUserInfo: function(e) {
