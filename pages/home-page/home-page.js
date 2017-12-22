@@ -19,18 +19,19 @@ Page({
   
    scrollLeft: 0, //tab标题的滚动条位置
    currentTab: 0, //预设当前项的值
-    imgUrls: [
-      {
+   imgUrls:[],
+    // imgUrls: [
+    //   {
        
-        url: 'http://img04.tooopen.com/images/20130712/tooopen_17270713.jpg'
-      }, {
+    //     url: 'http://img04.tooopen.com/images/20130712/tooopen_17270713.jpg'
+    //   }, {
         
-        url: 'http://img04.tooopen.com/images/20130617/tooopen_21241404.jpg'
-      }, {
+    //     url: 'http://img04.tooopen.com/images/20130617/tooopen_21241404.jpg'
+    //   }, {
      
-        url: 'http://img04.tooopen.com/images/20130701/tooopen_20083555.jpg'
-      }
-    ],
+    //     url: 'http://img04.tooopen.com/images/20130701/tooopen_20083555.jpg'
+    //   }
+    // ],
     indicatorDots: true,
     autoplay: true,
  
@@ -121,6 +122,21 @@ Page({
        
       }
     })
+
+    wx.request({
+      url: 'https://liangyi120.xin/home/imgUrl', //仅为示例，并非真实的接口地址
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data)
+        taht.setData({
+          imgUrls:res.data
+        })
+
+      }
+    })
+
 
     if (app.globalData.userInfo) {
       this.setData({
