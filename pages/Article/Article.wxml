@@ -1,3 +1,4 @@
+<import src="../wxParse/wxParse.wxml" />
 <view class="body">
   <view class='title'>{{details}}</view>
   <view class='timeAndname'>
@@ -6,12 +7,14 @@
     
   </view>
   <view class='textAndimg'>
-    <view class='text'>
-    {{text}}
-    </view>
-
-    <view class='image'>
+   <view class='image'>
       <image src='{{img}}'></image>
     </view>
+
+   
+
+
+
   </view>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
 </view>
