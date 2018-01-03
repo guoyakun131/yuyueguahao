@@ -23,7 +23,7 @@ Page({
     })
     var sell = this
     wx.request({
-      url: 'https://liangyi120.xin/experts/expertsClassify', 
+      url: 'https://qubing.net.cn/experts/expertsClassify', 
       data: {
         department: options.departmentName
       },

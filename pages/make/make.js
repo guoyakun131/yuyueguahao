@@ -37,7 +37,7 @@ onLoad: function () {
       key: 'sessionkey',
       success: function (res) {
         wx.request({
-          url: 'https://liangyi120.xin/user/myReservation',
+          url: 'https://qubing.net.cn/user/myReservation',
           data: {
             session: res.data
           },
@@ -54,7 +54,7 @@ onLoad: function () {
         })
 
         wx.request({
-          url: 'https://liangyi120.xin/user/myReservationAchieve',
+          url: 'https://qubing.net.cn/user/myReservationAchieve',
           data: {
             session: res.data
           },
@@ -83,7 +83,7 @@ cancel: function (event){
      key: 'sessionkey',
      success: function (res) {
        wx.request({
-         url: 'https://liangyi120.xin/user/cancel',
+         url: 'https://qubing.net.cn/user/cancel',
          data: {
            session: res.data,
            e_id: event.target.dataset.id

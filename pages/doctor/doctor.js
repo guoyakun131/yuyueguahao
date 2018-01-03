@@ -20,7 +20,7 @@ Page({
   sousuo:function(ev){
     if (ev.detail.value){
     wx.request({
-      url: 'https://liangyi120.xin/experts/name', 
+      url: 'https://qubing.net.cn/experts/name', 
       data: {
         name: ev.detail.value
       },
@@ -81,7 +81,7 @@ Page({
 
 
     wx.request({
-      url: 'https://liangyi120.xin/depatment/departmentMap', 
+      url: 'https://qubing.net.cn/depatment/departmentMap', 
       header: {
         'content-type': 'application/json' // 默认值
       },
@@ -96,7 +96,7 @@ Page({
 
    //var quantitys = this
     wx.request({
-      url: 'https://liangyi120.xin/experts/quantity', 
+      url: 'https://qubing.net.cn/experts/quantity', 
       header: {
         'content-type': 'application/json' // 默认值
       },
@@ -114,7 +114,7 @@ Page({
       key: 'sessionkey',
       success: function (res) {
         wx.request({
-          url: 'https://liangyi120.xin/user/atten',
+          url: 'https://qubing.net.cn/user/atten',
           data: {
             session: res.data
           },

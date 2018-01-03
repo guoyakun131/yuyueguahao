@@ -115,7 +115,7 @@ Page({
               success: function(res) {
                 console.log("sions")
                 wx.request({
-                  url: 'https://liangyi120.xin/user/addUser',
+                  url: 'https://qubing.net.cn/user/addUser',
                   data: {
 session:res.data,
 user:data
@@ -145,7 +145,7 @@ user:data
    //请求后端数据
     var taht =this
     wx.request({
-      url: 'https://liangyi120.xin/home/wenzhang', //仅为示例，并非真实的接口地址
+      url: 'https://qubing.net.cn/home/wenzhang', //仅为示例，并非真实的接口地址
       header: {
         'content-type': 'application/json' // 默认值
       },
@@ -164,7 +164,7 @@ user:data
     })
 
     wx.request({
-      url: 'https://liangyi120.xin/home/imgUrl', //仅为示例，并非真实的接口地址
+      url: 'https://qubing.net.cn/home/imgUrl', //仅为示例，并非真实的接口地址
       header: {
         'content-type': 'application/json' // 默认值
       },

@@ -43,7 +43,7 @@ App({
         if (res.code) {
           //发起网络请求
           wx.request({
-            url: 'https://liangyi120.xin/login/login',
+            url: 'https://qubing.net.cn/login/login',
             data: {
               code: res.code,
             },

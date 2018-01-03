@@ -19,7 +19,7 @@ Page({
   onLoad: function (options) {
     var that = this
     wx.request({
-      url: 'https://liangyi120.xin/home/articles',
+      url: 'https://qubing.net.cn/home/articles',
       data: {
         id: options.id
       },

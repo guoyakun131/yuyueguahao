@@ -25,7 +25,7 @@ Page({
       key: 'sessionkey',
       success: function (res) {
         wx.request({
-          url: 'https://liangyi120.xin/user/me',
+          url: 'https://qubing.net.cn/user/me',
           data: {
             session: res.data
           },

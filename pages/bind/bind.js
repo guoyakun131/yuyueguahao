@@ -74,7 +74,7 @@ session:function(){
   //后端发送短信
   openCode:function(sessionkey){
   wx.request({
-    url: 'https://liangyi120.xin/user/VerificationCode',
+    url: 'https://qubing.net.cn/user/VerificationCode',
     data: {
       session: sessionkey,
       phoneNumber: phonevalue
@@ -97,7 +97,7 @@ session:function(){
         key: 'sessionkey',
         success: function (res) {
           wx.request({
-            url: 'https://liangyi120.xin/user/binding',
+            url: 'https://qubing.net.cn/user/binding',
             data: {
               session: res.data,
               phoneNumber: e.detail.value.usernum,

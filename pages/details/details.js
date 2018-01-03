@@ -37,7 +37,7 @@ wxpay: function () {
 getOpenId: function (session) {
   var that = this;
   wx.request({
-    url: "https://liangyi120.xin/pay/openid",
+    url: "https://qubing.net.cn/pay/openid",
     data: {
       session: session
     },
@@ -64,14 +64,14 @@ generateOrder: function (openid){
  var that = this;
  var eids = that.data.eid
   wx.request({
-    url:'https://liangyi120.xin/pay/order',
+    url:'https://qubing.net.cn/pay/order',
    data: {
      openid:openid.data,
      id: eids
    },
    method: 'GET',
    success: function (res) {
-     //console.log("prepay_id"+res.data);
+     console.log("prepay_id"+res.data);
     that.doWxPay(res);
   }
 })
@@ -123,7 +123,7 @@ generateOrder: function (openid){
     })
     var that = this
     wx.request({
-      url: 'https://liangyi120.xin/experts/name',
+      url: 'https://qubing.net.cn/experts/name',
       data: {
         name: options.name
       },
