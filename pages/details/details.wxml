@@ -1,3 +1,4 @@
+<import src="../wxParse/wxParse.wxml" />
 <view class='body'>
     <view class='header'>
         <view class='head'></view>
@@ -108,7 +109,11 @@
                     <view class='biref-header'>
                       <text>简介</text>
                     </view>
+                    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+                   <!--
                     <view class='biref-contont'>
+
+                    
                         <view class='text'>广东省学会妇产科学学分会顾问</view>
                         <view class='text'>广东省医师学会妇产科分会顾问</view>
                         <view class='text'>中国癌症研究基金会子宫颈癌防治协作组委员</view>
@@ -120,8 +125,9 @@
                         <view class='text'>何小歆 : 18826439965 </view>
                         <view class='text'>梁舒洁 : 18100202212 </view>
                     </view>
-                    
+                    -->
                 </view>
+                <!--
                 <view class='disease'>
                   <view class='disease-header'>
                       <text>擅长疾病</text>
@@ -131,6 +137,7 @@
                       <view class='text'>宫颈癌前期病变的早期筛查诊治及阴道镜的临床作用;对下生殖道感染疾病的诊断治疗</view>
                   </view>
                 </view>
+                -->
             </view>
         </view>
     </view>

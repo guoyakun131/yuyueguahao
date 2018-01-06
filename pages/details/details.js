@@ -1,4 +1,5 @@
 //logs.js
+var WxParse = require('../wxParse/wxParse.js');
 const util = require('../../utils/util.js')
 
 Page({
@@ -13,6 +14,7 @@ Page({
     locations: '',
     kanzhenshijian: '',
     logs: []
+    //profiles:''
   },
   inputuserName: function (ev) {
     var data = ev.detail.value;
@@ -131,6 +133,9 @@ generateOrder: function (openid){
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
+
+        var profiles = res.data.profiles
+        WxParse.wxParse('article', 'html', profiles, that, 5);
         that.setData({
           eid: res.data.id,
           position: res.data.position,
@@ -138,8 +143,8 @@ generateOrder: function (openid){
           location: res.data.location,
           amount: res.data.amount,
           locations: res.data.locations,
-          kanzhenshijian: res.data.kanzhenshijian
-
+          kanzhenshijian: res.data.kanzhenshijian,
+          //profiles: res.data.profiles
         })
       }
 
