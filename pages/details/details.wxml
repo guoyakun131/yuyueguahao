@@ -5,7 +5,9 @@
         <view class='name'>{{name}}</view>
         <view class='duty'>{{position}}</view>
         <view class='describe1'>{{expertProfile}}</view>
+        <!--
         <view class='describe2'>以和你妇科首席资深专家</view>
+        -->
         <view class='Cost'>
             <view class='Cost-left'>
               <icon class='Const-icon' type='success' size='25' color='#02c400'></icon>

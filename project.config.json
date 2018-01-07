@@ -9,7 +9,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.6.0",
-	"appid": "wx0d0edc31204549b9",
+  "appid": "wx0d0edc31204549b9",
 	"projectname": "%E9%A2%84%E7%BA%A6",
 	"condition": {
 		"search": {

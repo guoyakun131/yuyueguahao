@@ -40,6 +40,7 @@ App({
     })
     wx.login({
       success: function (res) {
+        console.log(res.code)
         if (res.code) {
           //发起网络请求
           wx.request({
