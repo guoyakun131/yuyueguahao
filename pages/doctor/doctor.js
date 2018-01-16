@@ -45,7 +45,10 @@ Page({
 }
   },
   
-
+  onPullDownRefresh: function () {
+    wx.stopPullDownRefresh();
+    this.onLoad();
+  },
   onLoad: function () {
     //请求后端得到医生数据
     

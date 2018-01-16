@@ -20,16 +20,28 @@
 
   <view class='content'>
     <view class='contont-top'>
-      <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2000">
-  <block wx:for="{{msgList}}">
-  <!--
-   <navigator url="/pages/index/index?title={{item.url}}" open-type="navigate">
-    <swiper-item>
-     <view class="swiper_item">{{item.title}}</view>
-    </swiper-item>
-   </navigator>-->
-  </block>
- </swiper>
+        <view class='contont-box'>
+          <view class='laba-icon'>
+            <image src='../../images/notice.png'></image>
+          </view>
+
+          <view class='notice-text'>
+               <view class="marquee">
+                  <view class="marquee-contont" >
+                      <!-- <text>
+                      {{text}}<text style="display: inline-block; width:10em;"></text>
+                      </text> -->
+                       
+                      <text>{{text}}</text> <text style="display: inline-block;  width:10em;"></text>
+                      <text>{{text}}</text> <text style="display: inline-block; width:10em;"></text> 
+                      <text>{{text}}</text> <text style="display: inline-block; width:10em;"></text> 
+                     
+                  </view>
+              </view>
+          </view>
+   
+        
+        </view>
     </view>
     <view class='domain'>
         <view class='domain-left' catchtap='locationClick' >
@@ -38,7 +50,7 @@
               <image src='../images/location.png'></image>
             </view>
             <view class='domain-left-text'>
-              <text>邯郸市丛台区政通小区</text>
+              <text>邯郸市丛台区东柳北大街25-1-2</text>
             </view>
         </view>
 
@@ -87,42 +99,29 @@
 
                   <view  class='tabs-contont' wx:for="{{i}}">
 
-                  <view class='tabs-contont-image'style="width: 30%; height: 85%;background: url({{item.img}});background-size:cover; margin-top: 2.5%;margin-left: 5%;float: left;" >
-                
+                  <view class='tabs-contont-image' >
+                      <image src='{{item.img}}'></image>
                   </view>          
                   <navigator hover-class='none' class='nav' url='../Article/Article?id={{item.id}}'>
                     <view class='tabs-contont-text'>
-                          <view class='details' >
-                              {{item.details}}
-                          </view>
+                          <view class='details' >{{item.details}}</view>
 
-                          <view class='TimeandFabulous'>
-                              <view class='Time'>
-                                  <view class='TimeIcon'>
-                                    <image src='../images/time.png'></image>
-                                  </view>
-                                  <view class='TimeText'>{{item.time}}</view>
+                      <view class='TimeandFabulous'>
+                            
+                              <view class='TimeIcon'>
+                                  <image src='../images/time.png'></image>
                               </view>
+                              <view class='TimeText'>{{item.time}}</view>
+                             
+                                    
+                          
+                              <view class='browse-Icon'>
+                              <image src='../images/browse.png'></image>
+                              </view>
+                              <view class='browse-Text'>{{item.browseInt}}</view>
+                            </view>
                               
-                              <view class='Fabulous-franm'>
-                                  <view class='browse'>
-                                    <view class='browse-Icon'>
-                                      <image src='../images/browse.png'></image>
-                                    </view>
-                                    <view class='browse-Text'>
-                                        {{item.browseInt}}
-                                    </view>
-                                  </view>
-                                  <view class='Fabulous'>
-                                    <view class='fabulous-Icon'>
-                                       <image src='../images/fabulous.png'></image>
-                                    </view>
-                                    <view class='fabulous-Text'>
-                                        {{item.fabulousInt}}
-                                    </view>
-                                  </view>
-                              </view>
-                          </view> 
+                      
                               
                     
                     </view>
@@ -146,3 +145,6 @@
     
   </view>
 </view>
+
+
+         

@@ -18,6 +18,12 @@
   margin-top: 40rpx;
   margin-left: 40%;
 }
+.head image{
+  width: 100%;
+  height: 100%;
+  float: left;
+  border-radius: 50%;
+}
 .name{
   float: left;
   width: 100%;

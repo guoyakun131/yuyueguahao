@@ -17,6 +17,11 @@ Page({
     userInfo:{}
     
   },
+  onPullDownRefresh: function () {
+    wx.stopPullDownRefresh();
+    this.onLoad();
+  },
+
   onLoad: function () {
     var that=this;
     init(that);
@@ -33,7 +38,7 @@ Page({
             'content-type': 'application/json' // 默认值
           },
           success: function (res) {
-            //console.log(res.data)
+            console.log(res.data)
             that.setData({
               about: res.data.about,
               binding: res.data.binding

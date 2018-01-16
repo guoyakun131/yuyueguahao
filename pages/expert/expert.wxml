@@ -10,7 +10,9 @@
   <scroll-view scroll-y="true" class='scroll-view-y'>
   
     <view class='contont' wx:for="{{expert}}">
-        <view class='head'></view>
+        <view class='head'>
+         <image src='{{item.img}}'></image>
+        </view>
         <view class='name'>{{item.name}}</view>
         <view class='duty'>{{item.position}}</view>
         <view class='describe1'>{{item.profile}}</view>

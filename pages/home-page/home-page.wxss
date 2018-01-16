@@ -1,9 +1,9 @@
-
 .body{
   position: absolute;
   width: 100%;
   height: 100%;
   font-family: '微软雅黑';
+ 
 }
 image{
   width: 100%;
@@ -36,6 +36,54 @@ image{
   border-top: 20rpx #f8f8f8 solid;
   border-bottom: 20rpx #f8f8f8 solid;
 }
+.contont-box{
+  width: 92%;
+  float: left;
+  height: 100%;
+  margin-left: 4%;
+}
+image{
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+.laba-icon{
+  float: left;
+  width: 30rpx;
+  height: 26rpx;
+  margin-right: 15rpx;
+  margin-top: 25rpx;
+
+}
+.notice-text{
+  float: left;
+  width: 92%;
+  height: 50%;
+  margin-top: 18rpx;
+
+}
+@keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+.marquee{
+    width: 100%;
+    height: 44px;
+  
+   color: #333;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    position: relative;
+    font-size: 28rpx;
+}
+.marquee-contont{
+    display: inline-block;
+    position: relative;
+    padding-right: 0px;
+    animation: kf-marque-animation 5s linear infinite;
+    white-space: nowrap;
+}
+
 .domain{
   width: 100%;
   height: 10%;
@@ -44,7 +92,7 @@ image{
   
 }
 .domain-left{
-  width: 60%;
+  width: 65%;
   height: 50%;
   border-right: 2rpx #f5f5f5 solid;
   float: left;
@@ -59,11 +107,11 @@ image{
   
   float: left;
 margin-top: 5rpx;
-margin-left: 50rpx;
+margin-left: 30rpx;
 
 }
 .domain-left-text{
-  width:60%;
+  width:80%;
   height: 80%;
   margin-left:8rpx;
   
@@ -87,7 +135,7 @@ margin-left: 50rpx;
   height: 30rpx;
   float: left;
 margin-top: 17rpx;
-margin-left: 55rpx;
+margin-left: 50rpx;
 }
 .domain-right-text{
   float: left;
@@ -153,19 +201,15 @@ margin-left: 55rpx;
 }
 
 .tabs-contont-image{
-  width: 30%;
-  height: 85%;
-
-  background: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2823206088,3616268051&fm=27&gp=0.jpg);
-
-  background-size:cover; 
-  margin-top: 2.5%;
-  margin-left: 5%;
+  width: 35%;
+  height: 70%;
+  margin-top: 4.5%;
+  margin-left: 4%;
   float: left;
   
 }
 .nav{
- width: 58%;
+ width: 50%;
   height: 85%;
   margin-top: 2.5%;
   margin-left: 4%;
@@ -178,22 +222,28 @@ margin-left: 55rpx;
 }
 .details{
  
-  white-space:normal;
+ overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    white-space: normal;
+    -webkit-box-orient: vertical;
   width: 100%;
-  height: 40%;
-  transform: translateY(15rpx);
+  height: 38%;
+ margin-top: 15rpx;
   font-size: 28rpx;
   color: #464545;
 }
 .TimeandFabulous{
-  width: 50%;
-  height: 50%;
-  margin-top: 2.5%;
-}
-.Time{
   width: 100%;
   height: 50%;
+  margin-top: 13%;
+  float: left;
+  margin-left: 8rpx;
+}
+.Time{
 
+  float: left;
   font-size: 26rpx;
   color: #ccc;
 }
@@ -203,60 +253,29 @@ margin-left: 55rpx;
  margin-top: 6rpx;
   border-radius: 50%;
   float: left;
+
 }
 .TimeText{
-  padding-left: 50rpx;
-  
-}
-.Fabulous-franm{
-  width: 100%;
-  height: 50%;
+ margin-left: 20rpx;
+   color: #ccc;
   font-size: 26rpx;
-  color: #ccc;
-  
-}
-.browse{
-  width: 50%;
-  height: 100%;
   float: left;
   
 }
+
+
 .browse-Icon{
   width: 30rpx;
   height: 20rpx;
-  margin-top: 6rpx;
-  border-radius: 50%;
+ margin-top: 8rpx;
+  
   float: left;
+  margin-left: 25rpx;
+
 }
 .browse-Text{
-  padding-left: 50rpx;
-  transform: translateY(-2rpx);
-}
-.fabulous-Icon{
-    border-radius: 50%;
+  color: #ccc;
+  font-size: 26rpx;
   float: left;
-    width: 25rpx;
-  height: 25rpx;
-  margin-top: 5rpx;
-}
-.fabulous-Text{
-  padding-left: 40rpx;
-  transform: translateY(-2rpx);
-}
-.Fabulous{
-  width: 50%;
-  height: 100%;
-  float: left; 
-}
-.swiper_container {
- height: 55rpx;
- width: 80vw;
-}
- 
-.swiper_item {
- font-size: 25rpx;
- overflow: hidden;
- text-overflow: ellipsis;
- white-space: nowrap;
- letter-spacing: 2px;
+  margin-left: 20rpx;
 }

@@ -5,47 +5,44 @@ const app = getApp()
 Page({
 
   data: {
-    msgList: [
-      { url: "url", title: "公告：多地首套房贷利率上浮 热点城市渐迎零折扣时代" },
-      { url: "url", title: "公告：悦如公寓三周年生日趴邀你免费吃sdsdsdsddsddds喝欢唱" },
-      { url: "url", title: "公告：你想和一群有志青年一起过生日嘛？" }],
     //types: [0, 1, 2, 3, 4],
-    a:[],
+    text: [],
+    a: [],
     b: [],
     c: [],
     d: [],
     e: [],
-   tabsName:"皮科疾病",
-   //details:"内科迎来最年轻鲜肉医生，女患者和女医师都疯狂了",
-  // Time:"2017-10-24",
-  // browseInt:"3",
-  // FabulousInt:"0",
-  
-   scrollLeft: 0, //tab标题的滚动条位置
-   currentTab: 0, //预设当前项的值
-   imgUrls:[],
+    tabsName: "皮科疾病",
+    //details:"内科迎来最年轻鲜肉医生，女患者和女医师都疯狂了",
+    // Time:"2017-10-24",
+    // browseInt:"3",
+    // FabulousInt:"0",
+
+    scrollLeft: 0, //tab标题的滚动条位置
+    currentTab: 0, //预设当前项的值
+    imgUrls: [],
     // imgUrls: [
     //   {
-       
+
     //     url: 'http://img04.tooopen.com/images/20130712/tooopen_17270713.jpg'
     //   }, {
-        
+
     //     url: 'http://img04.tooopen.com/images/20130617/tooopen_21241404.jpg'
     //   }, {
-     
+
     //     url: 'http://img04.tooopen.com/images/20130701/tooopen_20083555.jpg'
     //   }
     // ],
     indicatorDots: true,
     autoplay: true,
- 
+
     interval: 5000,
     duration: 500,
-    userInfo: {}  
-    
+    userInfo: {}
+
   },
   switchTab: function (e) {
-    
+
     this.setData({
       currentTab: e.detail.current
     });
@@ -54,7 +51,7 @@ Page({
   // 点击标题切换当前页时改变样式
   swichNav: function (e) {
     var cur = e.target.dataset.current;
-   
+
     if (this.data.currentTaB == cur) { return false; }
     else {
       this.setData({
@@ -74,80 +71,48 @@ Page({
       })
     }
   },
-  locationClick:function(){
+  locationClick: function () {
     wx.getLocation({
       type: 'gcj02', //返回可以用于wx.openLocation的经纬度
       success: function (res) {
-        var latitude = res.latitude
-        var longitude = res.longitude
-        
+        var latitude = 36.6014851992
+        var longitude = 114.5302712917
+        console.log(res);
+
         wx.openLocation({
           latitude: latitude,
           longitude: longitude,
-          name:"邯郸市丛台区政通小区",
+          name: "邯郸市丛台区东柳北大街25-1-2",
           scale: 28
+
+
         })
       }
     })
   },
-  telephoneClick:function(){
+  telephoneClick: function () {
     wx.makePhoneCall({
-      phoneNumber: '17611028621' //仅为示例，并非真实的电话号码
+      phoneNumber: '0310-3020288' //仅为示例，并非真实的电话号码
     })
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function () {
     wx.navigateTo({
       url: '../logs/logs'
     })
   },
 
-  
-  
+onPullDownRefresh: function(){
+  wx.stopPullDownRefresh();
+  this.onLoad();
+},
+
   onLoad: function () {
-
-        wx.getUserInfo({
-          
-          success: function(res) {
-            console.log("dfa")
-            var data ={
-              nickName: res.userInfo.nickName,
-              avatar: res.userInfo.avatarUrl
-            }
-            wx.getStorage({
-              key: 'sessionkey',
-              success: function(res) {
-                console.log("sions")
-                wx.request({
-                  url: 'https://qubing.net.cn/user/addUser',
-                  data: {
-session:res.data,
-user:data
-                  },
-                  header: {
-                    'content-type': 'application/json' // 默认值
-                  },
-                  success: function (res) {
-                    console.log("成功")
-                  }
-                })
-              },
-              fail: function(res) {
-                console.log("123")
-              },
-              complete: function(res) {},
-            })
-           
-          },
-          fail: function(res) {},
-          complete: function(res) {},
-        })
-
 
     
 
-   //请求后端数据
-    var taht =this
+    //请求后端数据
+    var taht = this
     wx.request({
       url: 'https://qubing.net.cn/home/wenzhang', //仅为示例，并非真实的接口地址
       header: {
@@ -156,14 +121,14 @@ user:data
       success: function (res) {
         console.log(res.data)
         taht.setData({
-          a:res.data.a,
+          a: res.data.a,
           b: res.data.b,
           c: res.data.c,
           d: res.data.d,
           e: res.data.e,
           //types:res.data.type
-          })
-       
+        })
+
       }
     })
 
@@ -175,7 +140,23 @@ user:data
       success: function (res) {
         console.log(res.data)
         taht.setData({
-          imgUrls:res.data
+          imgUrls: res.data
+        })
+
+      }
+    })
+
+
+
+    wx.request({
+      url: 'https://qubing.net.cn/home/tg', //仅为示例，并非真实的接口地址
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data)
+        taht.setData({
+          text: res.data
         })
 
       }
@@ -187,7 +168,7 @@ user:data
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
-    } else if (this.data.canIUse){
+    } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
@@ -208,10 +189,10 @@ user:data
         }
       })
 
-      
+
     }
   },
-  getUserInfo: function(e) {
+  getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({

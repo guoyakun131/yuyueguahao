@@ -16,7 +16,9 @@
     <view  class='{{make}}'>
          <view class='plate' wx:for="{{myReservation}}">
           <view class='plate-left'>
-            <view class='head'></view>
+            <view class='head'>
+             <image src='{{item.img }}'></image>
+            </view>
           </view>
           <view class='plate-contont'>
             <view class='words_name'>
@@ -42,7 +44,9 @@
      <view  class='{{complate}}'>
         <view class='plate' wx:for="{{myReservationAchieve}}">
         <view class='plate-left'>
-          <view class='head'></view>
+          <view class='head'>
+          <image src='{{item.img }}'></image>
+          </view>
         </view>
         <view class='plate-contont'>
           <view class='words_one'>
