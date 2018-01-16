@@ -179,10 +179,16 @@ float: left;
 }
 
 .image{
-  width: 70%;
-  height: 70%;
+  width: 140rpx;
+  height: 140rpx;
   border-radius: 50%;
-  border:3rpx solid #ccc;
+ 
+}
+.image image{
+  width: 100%;
+  height: 100%;
+  float: left;
+  border-radius: 50%;
 }
 
 .name{

@@ -38,9 +38,49 @@ App({
         }
       }
     })
+
+    wx.getUserInfo({
+      success: function (res) {
+        console.log("dfass")
+        var data = {
+          nickName: res.userInfo.nickName,
+          avatar: res.userInfo.avatarUrl
+        }
+        wx.getStorage({
+          key: 'sessionkey',
+          success: function (res) {
+            console.log("sions")
+            wx.request({
+              url: 'https://qubing.net.cn/user/addUser',
+              data: {
+                session: res.data,
+                user: data
+              },
+              header: {
+                'content-type': 'application/json' // 默认值
+              },
+              success: function (res) {
+                console.log("成功")
+              }
+            })
+          },
+          fail: function (res) {
+            console.log("123")
+          },
+          complete: function (res) { },
+        })
+
+      },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
+
+
+
+
+
     wx.login({
       success: function (res) {
-        console.log(res.code)
         if (res.code) {
           //发起网络请求
           wx.request({

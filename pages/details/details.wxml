@@ -1,7 +1,9 @@
 <import src="../wxParse/wxParse.wxml" />
 <view class='body'>
     <view class='header'>
-        <view class='head'></view>
+        <view class='head'>
+        <image src='{{img}}'></image>
+        </view>
         <view class='name'>{{name}}</view>
         <view class='duty'>{{position}}</view>
         <view class='describe1'>{{expertProfile}}</view>
