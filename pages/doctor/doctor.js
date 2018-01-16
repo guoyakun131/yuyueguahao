@@ -51,7 +51,7 @@ Page({
   },
   onLoad: function () {
     //请求后端得到医生数据
-    
+  
     var sell = this
     // wx.request({
     //   url: 'https://liangyi120.xin/experts/expertsAll', 
@@ -89,7 +89,9 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-      console.log(res.data)
+       
+        
+        console.log(res.data)
         sell.setData({
           department: res.data
         })
@@ -145,5 +147,9 @@ Page({
         return util.formatTime(new Date(log))
       })
     })
+  },
+  box:function(e){
+    console.log(e);
   }
+  
 })

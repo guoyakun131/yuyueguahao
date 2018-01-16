@@ -116,7 +116,7 @@ float: left;
 .contont{
     width: 100%;
     height: 75%;
-   
+   float: left;
 }
 .scroll-view-y{
   width: 100%;
@@ -130,7 +130,7 @@ float: left;
   height: 350rpx;
   float: left;
   border-bottom: 15rpx solid #f5f5f5;
- 
+ overflow: hidden;
   
   
   
@@ -144,9 +144,13 @@ float: left;
  color: #1466a8;
   border-bottom: 3rpx #ccc solid;
 }
-.expert-scroll{
+navigator{
   width: 100%;
   height: 80%;
+}
+.expert-scroll{
+  width: 100%;
+  height: 100%;
   margin-left: 20rpx;
 }
 .scroll-view-x{
@@ -155,26 +159,40 @@ float: left;
  white-space: nowrap; 
  display: flex;
 
-
-
-
 }
-.expert-contont{
+.expert-contont3{
   width: 243rpx;
   height: 243rpx;
-  
   display: inline-block;
   margin-top: 5%;
  
 }
+.expert-contont1{
+  width: 243rpx;
+  height: 243rpx;
+  float: left;
+  margin-top: 5%;
+  margin-left: 260rpx;
+ 
+}
+.expert-contont2{
+  width: 243rpx;
+  height: 243rpx;
+  float: left;
+  margin-top: 5%;
+  margin-left: 85rpx;
+ 
+  
+}
 .imageAndname{
-  width: 85%;
-  height: 90%;
+  width: 220rpx;
+  height: 230rpx;
   text-align: center;
   font-size: 28rpx;
   color: #ccc;
   float: right;
   margin-top: 6%;
+ 
   
 }
 
