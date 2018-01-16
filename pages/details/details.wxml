@@ -10,7 +10,7 @@
         <!--
         <view class='describe2'>以和你妇科首席资深专家</view>
         -->
-        <view class='Cost'>
+         <view class='Cost'>
             <view class='Cost-left'>
               <icon class='Const-icon' type='success' size='25' color='#02c400'></icon>
             </view>
@@ -34,11 +34,11 @@
 
                 </view>
             </view>
-        </view>
+        </view> 
     </view>
 
     <view class='contont'>
-        <view class='process'>
+         <view class='process'>
             <view class='process-header'>
                 <view class='line-left'></view>
                 <view class='line-text'>看诊流程</view>
@@ -99,7 +99,7 @@
                 </view>
                 
             </view>
-        </view>
+        </view> 
 
         <view class='introduce'>
             <view class='introduce-header'>
@@ -110,9 +110,7 @@
 
             <view class='introduce-contont'>
                 <view class='biref'>
-                    <view class='biref-header'>
-                      <text>简介</text>
-                    </view>
+                 
                     <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
                    <!--
                     <view class='biref-contont'>

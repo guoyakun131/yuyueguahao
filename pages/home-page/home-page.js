@@ -36,7 +36,7 @@ Page({
     indicatorDots: true,
     autoplay: true,
 
-    interval: 5000,
+    interval: 2000,
     duration: 500,
     userInfo: {}
 
